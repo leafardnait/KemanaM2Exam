@@ -1,0 +1,27 @@
+{
+    "name": "kemana/superhero",
+    "description": "Magento 2 Backend Developer Exam",
+    "require": {
+        "php": "~7.1.3||~7.2.0||~7.3.0",
+        "magento/framework": "102.0.*",
+        "magento/module-checkout": "100.3.*",
+        "magento/module-payment": "100.3.*"
+    },
+    "suggest": {
+        "magento/module-config": "101.1.*"
+    },
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Kemana\\Superhero\\": ""
+        }
+    },
+    "version": "1.0.0"
+}
