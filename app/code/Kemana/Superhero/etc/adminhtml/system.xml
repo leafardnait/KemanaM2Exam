@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+         <section id="checkout">
+            <tab>sales</tab>
+            <resource>Kemana_Superhero::superhero</resource>
+            <group id="superhero" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Checkout Additional Fields</label>
+                <field id="universes" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Superhero Universes</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <frontend_model>Kemana\Superhero\Block\Adminhtml\Form\Field\UniversesDynamicField</frontend_model>
+                </field>
+               
+            </group>
+        </section>
+    </system>
+</config>
