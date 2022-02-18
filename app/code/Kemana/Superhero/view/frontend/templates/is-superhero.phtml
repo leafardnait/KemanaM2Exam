@@ -1,0 +1,28 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+use Magento\Framework\Escaper;
+
+/** @var Escaper $escaper */
+/** @var ShoppingAssistanceViewModel $viewModel */
+$viewModel = $block->getViewModel();
+?>
+
+<?php if ($viewModel->isEnabled()): ?>
+    <div class="field choice <?php echo ($viewModel->isRequired()==='true') ? " required" : '' ?>">
+        <input type="checkbox"
+               name="is_superhero"
+               title="<?= $escaper->escapeHtmlAttr(__($viewModel->getIsSuperheroLabel())) ?>"
+               value="1"
+               id="is_superhero"
+               <?php if ($viewModel->getIsSuperheroValue()): ?>checked="checked"<?php endif; ?>
+               class="checkbox"
+               data-validate="{required:<?= $viewModel->isRequired()?>}">
+        <label for="is_superhero" class="label">
+            <span><?= $escaper->escapeHtmlAttr(__($viewModel->getIsSuperheroLabel())) ?></span>
+        </label>
+    </div>
+<?php endif ?>
