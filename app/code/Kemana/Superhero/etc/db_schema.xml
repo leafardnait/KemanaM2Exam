@@ -4,4 +4,8 @@
     <table name="sales_order" resource="sales" engine="innodb" comment="Sales Order">
         <column xsi:type="varchar" name="superhero_universes" nullable="false" length="50" comment="Superhero Universes"/>
     </table>
+    <!-- add also in quote table since customer checkout data need to store first in quote after saving to sales_order table -->
+    <table name="quote" resource="checkout" engine="innodb" comment="Quote">
+        <column xsi:type="varchar" name="superhero_universes" nullable="false" length="50" comment="Superhero Universes"/>
+    </table>
 </schema>
