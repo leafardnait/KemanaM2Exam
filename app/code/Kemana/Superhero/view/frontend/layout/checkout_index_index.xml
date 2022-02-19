@@ -24,7 +24,6 @@
                                                                 <item name="superhero_universes" xsi:type="array">
                                                                     <item name="component" xsi:type="string">Kemana_Superhero/js/view/universes</item>
                                                                     <item name="displayArea" xsi:type="string">before-place-order</item>
-                                                                    <item name="dataScope" xsi:type="string">checkoutcomment</item>
                                                                     <item name="provider" xsi:type="string">checkoutProvider</item>
                                                                 </item>
                                                             </item>

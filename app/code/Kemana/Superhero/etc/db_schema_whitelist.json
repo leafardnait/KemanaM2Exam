@@ -3,5 +3,10 @@
         "column": {
             "superhero_universes": true
         }
+    },
+    "quote": {
+        "column": {
+            "superhero_universes": true
+        }
     }
 }
