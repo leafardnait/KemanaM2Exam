@@ -21,11 +21,11 @@ class IsSuperheroViewModel implements ArgumentInterface
      */
     private $session;
     /**
-     * @var CustomerMetadataInterface
+     * @var CustomerRepositoryInterface
      */
     protected $customerRepositoryInterface;
     /**
-     * @var CustomerRepositoryInterface
+     * @var CustomerMetadataInterface
      */
     protected $customerMetadata;
     /**
@@ -84,7 +84,7 @@ class IsSuperheroViewModel implements ArgumentInterface
      */
     public function getIsSuperheroValue()
     {
-        $is_superhero = $this->_getCustomerAttribVaue('is_superhero');
+        $is_superhero = $this->_getCustomerAttribValue('is_superhero');
         return $is_superhero ? (bool)__($is_superhero) : false;
     }
     
@@ -139,7 +139,7 @@ class IsSuperheroViewModel implements ArgumentInterface
      * @param string $attributeCode
      * @return \Magento\Framework\Api\AttributeValue|null
      */
-    protected function _getCustomerAttribVaue($attributeCode)
+    protected function _getCustomerAttribValue($attributeCode)
     {
         try {
             if(null !== $this->_getCustomerData()){
