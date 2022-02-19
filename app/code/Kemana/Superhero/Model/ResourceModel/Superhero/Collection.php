@@ -20,7 +20,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     /**
      * @var string
      */
-    protected $_idFieldName = 'city_id';
+    protected $_idFieldName = 'id';
 
     /**
      * Define model & resource model
