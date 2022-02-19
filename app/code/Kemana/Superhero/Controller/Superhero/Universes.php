@@ -45,13 +45,8 @@ class Universes extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $universesJson = $this->getConfigValue('checkout/superhero/universes');
-        $universes = $this->json->unserialize($universesJson);
-        $data = [];
-        foreach($universes as $hero){
-            $data[] = $hero['value'];
-        }
-        $result['universesDropdown'] = $this->json->unserialize($universesJson);
         
+        $result['universesDropdown'] = $this->json->unserialize($universesJson);
         
         $resultJson = $this->_resultJsonFactory->create();
         return $resultJson->setData($result);
