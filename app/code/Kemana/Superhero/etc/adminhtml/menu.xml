@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Kemana_Superhero::core"
+           title="KEMANA" module="Kemana_Superhero"
+           sortOrder="10"
+           resource="Magento_Backend::content"
+           />
+           <!-- START: new node -->  
+       <add id="Kemana_Superhero::universes_grid"
+           title="Superhero Order Grid" module="Kemana_Superhero"
+           sortOrder="10" parent="Kemana_Superhero::core"
+           action="universes/superhero/index"
+           resource="Kemana_Superhero::universes_grid"
+           />
+       <!-- END:   new node -->
+
+    </menu>
+</config>
